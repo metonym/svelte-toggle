@@ -30,6 +30,7 @@
     "switch",
     "button",
     "accessible",
+    "a11y",
     "wai-aria"
   ],
   "files": [
