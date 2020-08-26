@@ -568,6 +568,11 @@ clean-css@^4.2.1:
   dependencies:
     source-map "~0.6.0"
 
+clipboard-copy@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/clipboard-copy/-/clipboard-copy-3.1.0.tgz#4c59030a43d4988990564a664baeafba99f78ca4"
+  integrity sha512-Xsu1NddBXB89IUauda5BIq3Zq73UWkjkaQlPQbLNvNsd5WBMnTWPNKYR6HGaySOxGYZ+BKxP2E9X4ElnI3yiPA==
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -2168,6 +2173,28 @@ svelte-loader@^2.9.0:
   dependencies:
     loader-utils "^1.1.0"
     svelte-dev-helper "^1.1.9"
+
+svelte-octicons@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/svelte-octicons/-/svelte-octicons-10.1.0.tgz#c145c04eba957ff6b00b5780bf850ff4c7c9b139"
+  integrity sha512-2DWBjMju7u3blxoThPYw/mxf/WSyBI+YXoV2MZEj4YTD5cKf6+Xs2gg7gtE8DBL+1aSb8ABmeRml8rASCaoXnQ==
+
+svelte-octicons@^9.6.3:
+  version "9.6.3"
+  resolved "https://registry.yarnpkg.com/svelte-octicons/-/svelte-octicons-9.6.3.tgz#c326ffee5d58c8b92183fd58d2b9d038b6dc40ff"
+  integrity sha512-SAwijL58UDtqEOTe8Gsn2YnPy7UaXgQ6U4/HBnUZt2zNlpe7veeLyaQTOC4z+2HalsqELDHJGdXkXUpBJdJEpw==
+
+svelte-primer@^0.1.0-rc.4:
+  version "0.1.0-rc.4"
+  resolved "https://registry.yarnpkg.com/svelte-primer/-/svelte-primer-0.1.0-rc.4.tgz#b8fc23033fda7027af3471d257476b631a314925"
+  integrity sha512-hEeVBpY4TY8Ij0UQKU0QP0cA/+L/bMJ+hJ7Qtq04Twi9Lk3N7TVctiN1OrGl33O4kTaYpyVsaxM+s5hK/6ol2Q==
+  dependencies:
+    svelte-octicons "^9.6.3"
+
+svelte-super-tiny-icons@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/svelte-super-tiny-icons/-/svelte-super-tiny-icons-0.3.2.tgz#764c7dd103f14c1e9e933f07aa4a34343851f238"
+  integrity sha512-WKmjTD9w6GGlQfTWxK8+guOAx8LsezWji2L0+YnZdFhino5864WwuTgyNzL3f+LR4AKsvZ6yalWtNRSrTiIkJA==
 
 svelte-toggle@../:
   version "0.1.0"
