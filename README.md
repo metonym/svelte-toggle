@@ -132,24 +132,26 @@ Alternatively, use named slots:
 
 API for the default `Toggle` component.
 
-| Prop name | Value                                                        |
-| :-------- | :----------------------------------------------------------- |
-| id        | `string` (default: `"toggle" + Math.random().toString(36)"`) |
-| label     | `string` (default: `"Label"`)                                |
-| toggled   | `boolean` (default: `true`)                                  |
-| disabled  | `boolean` (default: `false`)                                 |
-| on        | `string` (default: `undefined`)                              |
-| off       | `string` (default: `undefined`)                              |
+| Prop name      | Value                                                        |
+| :------------- | :----------------------------------------------------------- |
+| id             | `string` (default: `"toggle" + Math.random().toString(36)"`) |
+| label          | `string` (default: `"Label"`)                                |
+| hideLabel      | `boolean` (default: `false`)                                 |
+| small          | `boolean` (default: `false`)                                 |
+| toggled        | `boolean` (default: `true`)                                  |
+| disabled       | `boolean` (default: `false`)                                 |
+| on             | `string` (default: `undefined`)                              |
+| off            | `string` (default: `undefined`)                              |
+| switchColor    | `string` (default: `"#fff`)                                  |
+| toggledColor   | `string` (default: `"#0f62fe`)                               |
+| untoggledColor | `string` (default: `"#8d8d8d`)                               |
 
-## Dispatched events
+## Dispatched event
 
 ```jsx
 <Toggle
   on:change={({ detail }) => {
-    /**
-     * @type {Boolean}
-     */
-    console.log(detail.toggled);
+    console.log(detail.toggled); // true | false
   }}
 />
 ```
