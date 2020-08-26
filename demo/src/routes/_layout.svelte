@@ -10,8 +10,8 @@
   }
 
   :global(body) {
-    font-family: "Public Sans", sans-serif;
-    font-weight: 500;
+    font-family: sans-serif;
+    font-weight: 400;
     letter-spacing: 0.01rem;
     color: #161616;
     overflow-y: scroll;
