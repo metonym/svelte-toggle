@@ -1,5 +1,4 @@
 <script>
-  export let id = "toggle" + Math.random().toString(36);
   export let label = "Label";
   export let hideLabel = false;
   export let small = false;
@@ -12,6 +11,7 @@
   export let untoggledColor = "#8d8d8d";
 
   import { createEventDispatcher } from "svelte";
+  import ToggleCore from "./ToggleCore.svelte";
 
   const dispatch = createEventDispatcher();
 
@@ -102,36 +102,36 @@
   }
 </style>
 
-<label for={id} class:hideLabel>{label}</label>
+<ToggleCore bind:toggled let:label={labelProps} let:button>
+  <!-- svelte-ignore a11y-label-has-associated-control -->
+  <label {...labelProps} class:hideLabel>{label}</label>
 
-<div>
-  <button
-    class:small
-    {...$$restProps}
-    style="color: {switchColor}; background-color: {toggled ? toggledColor : untoggledColor};
-    {$$restProps.style}"
-    type="button"
-    role="switch"
-    aria-checked={toggled}
-    {id}
-    {disabled}
-    on:click
-    on:click={() => (toggled = !toggled)}
-    on:mouseover
-    on:mouseenter
-    on:mouseout
-    on:focus
-    on:blur
-    on:keydown />
-  {#if toggled}
-    {#if on}
-      <slot name="on">
-        <span>{on}</span>
+  <div>
+    <button
+      class:small
+      {...$$restProps}
+      {...button}
+      style="color: {switchColor}; background-color: {toggled ? toggledColor : untoggledColor};
+      {$$restProps.style}"
+      {disabled}
+      on:click
+      on:click={() => (toggled = !toggled)}
+      on:mouseover
+      on:mouseenter
+      on:mouseout
+      on:focus
+      on:blur
+      on:keydown />
+    {#if toggled}
+      {#if on}
+        <slot name="on">
+          <span>{on}</span>
+        </slot>
+      {/if}
+    {:else if off}
+      <slot name="off">
+        <span>{off}</span>
       </slot>
     {/if}
-  {:else if off}
-    <slot name="off">
-      <span>{off}</span>
-    </slot>
-  {/if}
-</div>
+  </div>
+</ToggleCore>
