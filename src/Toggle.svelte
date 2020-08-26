@@ -1,25 +1,50 @@
 <script>
   export let id = "toggle" + Math.random().toString(36);
-  export let label = "Toggle label";
+  export let label = "Label";
+  export let hideLabel = false;
+  export let small = false;
   export let toggled = true;
   export let disabled = false;
-  export let on = "on";
-  export let off = "off";
+  export let on = undefined;
+  export let off = undefined;
+  export let switchColor = "#fff";
+  export let toggledColor = "#0f62fe";
+  export let untoggledColor = "#8d8d8d";
 
-  import { createEventDispatcher, afterUpdate } from "svelte";
+  import { createEventDispatcher } from "svelte";
 
   const dispatch = createEventDispatcher();
 
-  afterUpdate(() => {
-    dispatch("change", { toggled });
-  });
+  $: dispatch("change", { toggled });
 </script>
 
 <style>
+  label {
+    font-size: 0.75rem;
+  }
+
+  /**
+  * Visually hide element without breaking screen readers
+  * https://a11yproject.com/posts/how-to-hide-content/
+  */
+  .hideLabel {
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+  }
+
   button {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.25rem;
     border: 0;
-    outline: 2px solid #e0e0e0;
-    background: none;
+    border-radius: 1rem;
+    height: 1.25rem;
+    width: 2.5rem;
     font: inherit;
     color: inherit;
     line-height: inherit;
@@ -29,51 +54,84 @@
     cursor: pointer;
   }
 
-  button:focus {
-    outline-color: #0f62fe;
+  button[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
   }
 
-  button[aria-checked="true"] :first-child,
-  button[aria-checked="false"] :last-child {
-    background-color: #0f62fe;
-    color: #fff;
+  button:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0.125rem;
+    margin: auto;
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: currentColor;
+    transition: transform 150ms ease-out;
+  }
+
+  button[aria-checked="true"]:before {
+    transform: translateX(1.25rem);
+  }
+
+  button.small {
+    height: 1rem;
+    width: 1.75rem;
+  }
+
+  button.small:before {
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+
+  button.small[aria-checked="true"]:before {
+    transform: translateX(0.75rem);
+  }
+
+  div {
+    display: flex;
+    align-items: center;
   }
 
   span {
-    display: inline-block;
-    padding: 0.25rem;
-    min-width: 2.5rem;
-    text-align: center;
-  }
-
-  label {
     margin-left: 0.5rem;
   }
 </style>
 
-<button
-  {...$$restProps}
-  type="button"
-  role="switch"
-  aria-checked={toggled}
-  {id}
-  {disabled}
-  on:click
-  on:click={() => {
-    toggled = !toggled;
-  }}
-  on:mouseover
-  on:mouseenter
-  on:mouseout
-  on:focus
-  on:blur
-  on:keydown>
-  <slot name="on">
-    <span>{on}</span>
-  </slot>
-  <slot name="off">
-    <span>{off}</span>
-  </slot>
-</button>
+<label for={id} class:hideLabel>{label}</label>
 
-<label for={id}>{label}</label>
+<div>
+  <button
+    class:small
+    {...$$restProps}
+    style="color: {switchColor}; background-color: {toggled ? toggledColor : untoggledColor};
+    {$$restProps.style}"
+    type="button"
+    role="switch"
+    aria-checked={toggled}
+    {id}
+    {disabled}
+    on:click
+    on:click={() => (toggled = !toggled)}
+    on:mouseover
+    on:mouseenter
+    on:mouseout
+    on:focus
+    on:blur
+    on:keydown />
+  {#if toggled}
+    {#if on}
+      <slot name="on">
+        <span>{on}</span>
+      </slot>
+    {/if}
+  {:else if off}
+    <slot name="off">
+      <span>{off}</span>
+    </slot>
+  {/if}
+</div>
