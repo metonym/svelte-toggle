@@ -20,6 +20,8 @@
 
 <style>
   label {
+    display: block;
+    margin-bottom: 0.25rem;
     font-size: 0.75rem;
   }
 
@@ -39,7 +41,6 @@
 
   button {
     position: relative;
-    display: inline-block;
     padding: 0 0.25rem;
     border: 0;
     border-radius: 1rem;
