@@ -7,13 +7,19 @@
 
 This component follows best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
 
+## [Demo](https://metonym.github.io/svelte-toggle/)
+
 ## Install
 
 ```bash
 yarn add -D svelte-toggle
+# OR
+npm -i -D svelte-toggle
 ```
 
 ## Usage
+
+### Minimal
 
 ```html
 <script>
@@ -27,35 +33,120 @@ yarn add -D svelte-toggle
 {toggled ? 'Yes' : 'No'}
 ```
 
-### On/off labels
+### Switch descriptors
 
-The on/off labels can be customized through the `on` and `off` props:
+The toggle switch descriptors by setting `on` and `off`:
 
 ```html
-<Toggle on="Yes" off="No" />
+<Toggle on="On" off="Off" />
 ```
 
-Or, using named slots:
+Alternatively, use named slots:
 
 ```html
-<Toggle>
+<Toggle on off>
   <span slot="on">On</span>
   <span slot="off">Off</span>
 </Toggle>
 ```
 
+### Small variant
+
+```html
+<script>
+  import Toggle from "svelte-toggle";
+
+  let toggled = true;
+</script>
+
+<Toggle small label="My toggle label" on="On" off="Off" bind:toggled />
+```
+
+### Custom colors
+
+```html
+<script>
+  import Toggle from "svelte-toggle";
+
+  let toggled = true;
+</script>
+
+<Toggle
+  label="My toggle label"
+  switchColor="#eee"
+  toggledColor="#24a148"
+  untoggledColor="#fa4d56"
+  on="On"
+  off="Off"
+  bind:toggled
+/>
+```
+
+### Hidden label
+
+```html
+<script>
+  import Toggle from "svelte-toggle";
+
+  let toggled = true;
+</script>
+
+<Toggle hideLabel label="My toggle label" on="On" off="Off" bind:toggled />
+```
+
+### Hidden label + omitted switch descriptors
+
+```html
+<script>
+  import Toggle from "svelte-toggle";
+
+  let toggled = true;
+</script>
+
+<Toggle hideLabel label="My toggle label" bind:toggled />
+```
+
+### Fully controlled
+
+```html
+<script>
+  import { ToggleCore } from "svelte-toggle";
+
+  let toggled = true;
+</script>
+
+<ToggleCore {toggled} let:label let:button>
+  <!-- svelte-ignore a11y-label-has-associated-control -->
+  <label {...label}>Label</label>
+  <button
+    {...button}
+    on:click={() => {
+      toggled = !toggled;
+    }}>
+    {toggled ? 'On' : 'Off'}
+  </button>
+</ToggleCore>
+```
+
 ## API
 
-| Property name | Value                                                        |
-| :------------ | :----------------------------------------------------------- |
-| id            | `string` (default: `"toggle" + Math.random().toString(36)"`) |
-| label         | `string` (default: `"Toggle label"`)                         |
-| toggle        | `boolean` (default: `true`)                                  |
-| disabled      | `boolean` (default: `false`)                                 |
-| on            | `string` or `slot:on` (default: `"on"`)                      |
-| off           | `string` or `slot:off` (default: `"off"`)                    |
+API for the default `Toggle` component.
 
-## Dispatched events
+| Prop name      | Value                                                        |
+| :------------- | :----------------------------------------------------------- |
+| id             | `string` (default: `"toggle" + Math.random().toString(36)"`) |
+| label          | `string` (default: `"Label"`)                                |
+| hideLabel      | `boolean` (default: `false`)                                 |
+| small          | `boolean` (default: `false`)                                 |
+| toggled        | `boolean` (default: `true`)                                  |
+| disabled       | `boolean` (default: `false`)                                 |
+| on             | `string` (default: `undefined`)                              |
+| off            | `string` (default: `undefined`)                              |
+| switchColor    | `string` (default: `"#fff`)                                  |
+| toggledColor   | `string` (default: `"#0f62fe`)                               |
+| untoggledColor | `string` (default: `"#8d8d8d`)                               |
+
+## Dispatched event
 
 ```jsx
 <Toggle
