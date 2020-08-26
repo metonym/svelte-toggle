@@ -1,18 +1,15 @@
 {
-  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "develop": "sapper dev",
+    "dev": "sapper dev",
     "build": "sapper export --basepath svelte-toggle",
-    "deploy": "node gh-pages"
+    "deploy": "npx gh-pages -d public/svelte-toggle"
   },
   "dependencies": {
-    "polka": "next",
-    "sirv": "^0.4.0"
+    "polka": "next"
   },
   "devDependencies": {
     "@metonym/sapper": "^0.27.12",
-    "gh-pages": "^2.2.0",
     "svelte": "^3.0.0",
     "svelte-loader": "^2.9.0",
     "svelte-toggle": "../",
