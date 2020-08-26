@@ -7,6 +7,8 @@
 
 This component follows best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
 
+Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61?version=3.24.1).
+
 ## [Demo](https://metonym.github.io/svelte-toggle/)
 
 ## Install
