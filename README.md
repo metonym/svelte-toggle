@@ -5,7 +5,7 @@
 
 > Accessible toggle switch component.
 
-This component follows best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
+This component implements best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61?version=3.24.1).
 
@@ -144,9 +144,9 @@ API for the default `Toggle` component.
 | disabled       | `boolean` (default: `false`)                                 |
 | on             | `string` (default: `undefined`)                              |
 | off            | `string` (default: `undefined`)                              |
-| switchColor    | `string` (default: `"#fff`)                                  |
-| toggledColor   | `string` (default: `"#0f62fe`)                               |
-| untoggledColor | `string` (default: `"#8d8d8d`)                               |
+| switchColor    | `string` (default: `"#fff"`)                                  |
+| toggledColor   | `string` (default: `"#0f62fe"`)                               |
+| untoggledColor | `string` (default: `"#8d8d8d"`)                               |
 
 ## Dispatched event
 
