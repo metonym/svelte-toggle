@@ -4,9 +4,9 @@
   import Copy from "../components/Copy.svelte";
   import { name, version, homepage } from "../../../package.json";
 
-  let toggled = false;
-
+  let toggled = true;
   let idxInstall = 0;
+
   $: useYarn = idxInstall === 0;
   $: codeInstall = useYarn ? `yarn add -D ${name}` : `npm -i -D ${name}`;
 </script>
