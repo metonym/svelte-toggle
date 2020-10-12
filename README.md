@@ -16,7 +16,7 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964a
 ```bash
 yarn add -D svelte-toggle
 # OR
-npm -i -D svelte-toggle
+npm i -D svelte-toggle
 ```
 
 ## Usage
