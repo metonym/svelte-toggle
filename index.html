@@ -1,59 +1,17 @@
-<!DOCTYPE html> <html lang=en> <head> <meta charset=utf-8> <meta content="width=device-width,initial-scale=1" name=viewport> <link href=https://unpkg.com/@primer/css@15.0.0/dist/primer.css rel=stylesheet> <title>svelte-toggle</title> <base href=/svelte-toggle/ > <style>@media(max-width:768px){.col-4.svelte-17qklxx,.col-8.svelte-17qklxx{width:100%}}label.svelte-1y1be9d{display:block;margin-bottom:.25rem;font-size:.75rem}.hideLabel.svelte-1y1be9d{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);white-space:nowrap}button.svelte-1y1be9d{position:relative;padding:0 .25rem;border:0;border-radius:1rem;height:1.25rem;width:2.5rem;font:inherit;color:inherit;line-height:inherit}button.svelte-1y1be9d:not([disabled]){cursor:pointer}button[disabled].svelte-1y1be9d{cursor:not-allowed;opacity:.6}button.svelte-1y1be9d:before{position:absolute;content:"";top:0;bottom:0;left:.125rem;margin:auto;height:1rem;width:1rem;text-align:center;border-radius:50%;background-color:currentColor;transition:transform 150ms ease-out}button[aria-checked=true].svelte-1y1be9d:before{transform:translateX(1.25rem)}button.small.svelte-1y1be9d{height:1rem;width:1.75rem}button.small.svelte-1y1be9d:before{height:.75rem;width:.75rem}button.small[aria-checked=true].svelte-1y1be9d:before{transform:translateX(.75rem)}div.svelte-1y1be9d{display:flex;align-items:center}span.svelte-1y1be9d{margin-left:.5rem}</style> <noscript id=sapper-head-start></noscript><noscript id=sapper-head-end></noscript> <link href=/svelte-toggle/client/d063995c5adf19ea74b7/main.js rel=preload as=script><link href=/svelte-toggle/client/d063995c5adf19ea74b7/index.0.js rel=preload as=script></head> <body> <div id=sapper> <main class="container-lg p-4"><div class="clearfix mb-5"><div class="svelte-17qklxx float-left px-1 col-4"><div class="d-flex flex-items-baseline mb-3"><h1>svelte-toggle</h1> <div><span class="ml-3 mr-1" title="NPM package version">v1.0.0</span> <a href=https://github.com/metonym/svelte-toggle>GitHub</a></div></div> <h2 class=mb-2>Install</h2> <div class=tabnav> <nav class=tabnav-tabs><a href=# class=tabnav-tab aria-current=page>yarn </a><a href=# class=tabnav-tab>npm </a></nav></div> <div class="d-flex Box"><pre class="d-flex flex-1"><code class=p-3>yarn add -D svelte-toggle</code></pre> <button class="border-0 border-left btn-octicon" type=button style=margin-left:0;min-width:2.75rem><svg aria-hidden=true class="octicon octicon-clippy" height=16 version=1.1 viewBox="0 0 16 16" width=16><path d="M5.75 1a.75.75 0 00-.75.75v3c0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75v-3a.75.75 0 00-.75-.75h-4.5zm.75 3V2.5h3V4h-3zm-2.874-.467a.75.75 0 00-.752-1.298A1.75 1.75 0 002 3.75v9.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 13.25v-9.5a1.75 1.75 0 00-.874-1.515.75.75 0 10-.752 1.298.25.25 0 01.126.217v9.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-9.5a.25.25 0 01.126-.217z" fill-rule=evenodd></path></svg></button> </div></div></div> <div class="clearfix mb-5"><div class="svelte-17qklxx float-left px-1 col-8"><h2 class=mb-3>Usage</h2> <h3 class=mb-3>Basic</h3> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class=svelte-1y1be9d for=toggle0.qn3qgezp5o>My toggle label</label> <div class=svelte-1y1be9d><button class=svelte-1y1be9d type=button aria-checked id=toggle0.qn3qgezp5o role=switch style=color:#fff;background-color:#0f62fe></button> <span class=svelte-1y1be9d>On</span> </div></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;Toggle label="My toggle label" on="On" off="Off" bind:toggled /></code></pre></div> <h3 class="mb-3 mt-6">Small variant</h3> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class=svelte-1y1be9d for=toggle0.0xralvkag17>My toggle label</label> <div class=svelte-1y1be9d><button class="svelte-1y1be9d small" type=button aria-checked id=toggle0.0xralvkag17 role=switch style=color:#fff;background-color:#0f62fe></button> <span class=svelte-1y1be9d>On</span> </div></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;Toggle small label="My toggle label" on="On" off="Off" bind:toggled /></code></pre></div> <h3 class="mb-3 mt-6">Custom colors</h3> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class=svelte-1y1be9d for=toggle0.77lfrj8pof7>My toggle label</label> <div class=svelte-1y1be9d><button class=svelte-1y1be9d type=button aria-checked id=toggle0.77lfrj8pof7 role=switch style=color:#eee;background-color:#24a148></button> <span class=svelte-1y1be9d>On</span> </div></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;Toggle
-  label="My toggle label"
-  switchColor="#eee"
-  toggledColor="#24a148"
-  untoggledColor="#fa4d56"
-  on="On"
-  off="Off"
-  bind:toggled /></code></pre></div> <h3 class="mb-3 mt-6">Hidden label</h3> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class="svelte-1y1be9d hideLabel" for=toggle0.pflsgthahsg>My toggle label</label> <div class=svelte-1y1be9d><button class=svelte-1y1be9d type=button aria-checked id=toggle0.pflsgthahsg role=switch style=color:#fff;background-color:#0f62fe></button> <span class=svelte-1y1be9d>On</span> </div></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;Toggle
-  hideLabel
-  label="My toggle label"
-  on="On"
-  off="Off"
-  bind:toggled /></code></pre></div> <h3 class="mb-3 mt-6">Hidden label + omitted switch descriptors</h3> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class="svelte-1y1be9d hideLabel" for=toggle0.c18u91vr05u>My toggle label</label> <div class=svelte-1y1be9d><button class=svelte-1y1be9d type=button aria-checked id=toggle0.c18u91vr05u role=switch style=color:#fff;background-color:#0f62fe></button> </div></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;Toggle hideLabel label="My toggle label" bind:toggled /></code></pre></div> <h3 class="mb-3 mt-6">Fully controlled</h3> <p>The <code>ToggleCore</code> component is completely unstyled. You must write your own mark-up and styles. </p> <div class="Box px-3 py-4" style=border-bottom-left-radius:0;border-bottom-right-radius:0> <label class=svelte-17qklxx for=toggle0.0egzj545mp5>Label</label> <button class=svelte-17qklxx type=button aria-checked id=toggle0.0egzj545mp5 role=switch>On</button></div> <div class="d-flex Box border-top-0" style=border-top-left-radius:0;border-top-right-radius:0><pre class="d-flex flex-1 overflow-x-auto"><code class=p-3>&lt;script>
-  import { ToggleCore } from "svelte-toggle";
-
-  let toggled = true;
-&lt;/script>
-        
-&lt;ToggleCore {toggled} let:label let:button>
-  &lt;!-- svelte-ignore a11y-label-has-associated-control -->
-  &lt;label {...label}>Label&lt;/label>
-  &lt;button
-    {...button}
-    on:click={() => {
-      toggled = !toggled;
-    }}>
-    {toggled ? 'On' : 'Off'}
-  &lt;/button>
-&lt;/ToggleCore></code></pre></div></div></div></main></div> <script>__SAPPER__={baseUrl:"/svelte-toggle",preloaded:[void 0,{}]};</script><script src=/svelte-toggle/client/d063995c5adf19ea74b7/main.js></script> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/@primer/css@15.0.0/dist/primer.css"
+      rel="stylesheet"
+    />
+    <title>svelte-toggle</title>
+  <link rel="stylesheet" href="assets/style.6a335426.css">
+</head>
+  <body>
+    
+  <script type="module" src="assets/index.e19359aa.js"></script>
+</body>
+</html>
