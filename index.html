@@ -2,16 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://unpkg.com/@primer/css@15.0.0/dist/primer.css"
       rel="stylesheet"
     />
     <title>svelte-toggle</title>
-    %sapper.base% %sapper.styles% %sapper.head%
   </head>
   <body>
-    <div id="sapper">%sapper.html%</div>
-    %sapper.scripts%
+    <script type="module">
+      import App from "/Example.svelte";
+
+      const app = new App({ target: document.body });
+
+      export default app;
+    </script>
   </body>
 </html>

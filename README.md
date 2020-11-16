@@ -13,7 +13,7 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964a
 
 ## Install
 
-```bash
+```sh
 yarn add -D svelte-toggle
 # OR
 npm i -D svelte-toggle
@@ -21,9 +21,9 @@ npm i -D svelte-toggle
 
 ## Usage
 
-### Minimal
+### Basic
 
-```html
+```svelte
 <script>
   import Toggle from "svelte-toggle";
 
@@ -39,13 +39,13 @@ npm i -D svelte-toggle
 
 The toggle switch descriptors by setting `on` and `off`:
 
-```html
+```svelte
 <Toggle on="On" off="Off" />
 ```
 
 Alternatively, use named slots:
 
-```html
+```svelte
 <Toggle on off>
   <span slot="on">On</span>
   <span slot="off">Off</span>
@@ -54,7 +54,7 @@ Alternatively, use named slots:
 
 ### Small variant
 
-```html
+```svelte
 <script>
   import Toggle from "svelte-toggle";
 
@@ -66,7 +66,7 @@ Alternatively, use named slots:
 
 ### Custom colors
 
-```html
+```svelte
 <script>
   import Toggle from "svelte-toggle";
 
@@ -86,7 +86,7 @@ Alternatively, use named slots:
 
 ### Hidden label
 
-```html
+```svelte
 <script>
   import Toggle from "svelte-toggle";
 
@@ -98,7 +98,7 @@ Alternatively, use named slots:
 
 ### Hidden label + omitted switch descriptors
 
-```html
+```svelte
 <script>
   import Toggle from "svelte-toggle";
 
@@ -110,7 +110,7 @@ Alternatively, use named slots:
 
 ### Fully controlled
 
-```html
+```svelte
 <script>
   import { ToggleCore } from "svelte-toggle";
 
@@ -144,9 +144,9 @@ API for the default `Toggle` component.
 | disabled       | `boolean` (default: `false`)                                 |
 | on             | `string` (default: `undefined`)                              |
 | off            | `string` (default: `undefined`)                              |
-| switchColor    | `string` (default: `"#fff"`)                                  |
-| toggledColor   | `string` (default: `"#0f62fe"`)                               |
-| untoggledColor | `string` (default: `"#8d8d8d"`)                               |
+| switchColor    | `string` (default: `"#fff"`)                                 |
+| toggledColor   | `string` (default: `"#0f62fe"`)                              |
+| untoggledColor | `string` (default: `"#8d8d8d"`)                              |
 
 ## Dispatched event
 
