@@ -8,7 +8,7 @@
   let idxInstall = 0;
 
   $: useYarn = idxInstall === 0;
-  $: codeInstall = useYarn ? `yarn add -D ${name}` : `npm -i -D ${name}`;
+  $: codeInstall = useYarn ? `yarn add -D ${name}` : `npm i -D ${name}`;
 </script>
 
 <style>
@@ -46,7 +46,8 @@
 
     <Box.Box class="d-flex">
       <pre class="d-flex flex-1">
-        <code class="p-3">{codeInstall}</code>
+        <code
+          class="p-3">{codeInstall}</code>
       </pre>
       <Copy text={codeInstall} />
     </Box.Box>
@@ -66,7 +67,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import Toggle from "svelte-toggle";
 
@@ -88,7 +90,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import Toggle from "svelte-toggle";
 
@@ -117,7 +120,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import Toggle from "svelte-toggle";
 
@@ -151,7 +155,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import Toggle from "svelte-toggle";
 
@@ -178,7 +183,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import Toggle from "svelte-toggle";
 
@@ -216,7 +222,8 @@
       class="d-flex border-top-0"
       style="border-top-left-radius: 0; border-top-right-radius: 0;">
       <pre class="d-flex flex-1 overflow-x-auto">
-        <code class="p-3">
+        <code
+          class="p-3">
           {`<script>
   import { ToggleCore } from "svelte-toggle";
 
