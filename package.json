@@ -7,6 +7,7 @@
   "svelte": "./src/index.js",
   "main": "./lib/index.js",
   "module": "./lib/index.mjs",
+  "types": "./types/index.d.ts",
   "sideEffects": false,
   "scripts": {
     "dev": "svite",
@@ -16,12 +17,13 @@
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^10.0.0",
+    "@tsconfig/svelte": "^1.0.10",
     "rollup": "^2.33.2",
-    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-svelte": "^6.1.1",
     "svelte": "^3.29.7",
     "svelte-primer": "^0.1.0-rc.4",
-    "svite": "^0.8.0"
+    "svite": "^0.8.0",
+    "typescript": "^4.0.5"
   },
   "repository": {
     "type": "git",
@@ -41,6 +43,7 @@
   ],
   "files": [
     "lib",
-    "src"
+    "src",
+    "types"
   ]
 }

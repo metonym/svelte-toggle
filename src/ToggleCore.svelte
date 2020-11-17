@@ -1,4 +1,8 @@
 <script>
+  /**
+   * @slot {{ label: { for: string; }; button: { id: string; disabled: boolean; "aria-checked": boolean; type: "button"; role: "switch"; [key: string]: any; } }}
+   */
+
   export let id = "toggle" + Math.random().toString(36);
   export let toggled = true;
   export let disabled = false;

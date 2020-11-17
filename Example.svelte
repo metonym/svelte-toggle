@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Toggle, { ToggleCore } from "./src";
   import { Navigation, Box } from "svelte-primer";
 

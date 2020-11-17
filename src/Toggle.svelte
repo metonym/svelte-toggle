@@ -4,7 +4,17 @@
   export let small = false;
   export let toggled = true;
   export let disabled = false;
+
+  /**
+   * Set a descriptor for the toggled state
+   * @type {string}
+   */
   export let on = undefined;
+
+  /**
+   * Set a descriptor for the untoggled state
+   * @type {string}
+   */
   export let off = undefined;
   export let switchColor = "#fff";
   export let toggledColor = "#0f62fe";
@@ -15,6 +25,9 @@
 
   const dispatch = createEventDispatcher();
 
+  /**
+   * @event {{ toggled: boolean; }} change
+   */
   $: dispatch("change", { toggled });
 </script>
 
@@ -125,14 +138,10 @@
       on:keydown />
     {#if toggled}
       {#if on}
-        <slot name="on">
-          <span>{on}</span>
-        </slot>
+        <slot name="on"><span>{on}</span></slot>
       {/if}
     {:else if off}
-      <slot name="off">
-        <span>{off}</span>
-      </slot>
+      <slot name="off"><span>{off}</span></slot>
     {/if}
   </div>
 </ToggleCore>

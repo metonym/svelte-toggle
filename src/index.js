@@ -1,5 +1,2 @@
-import Toggle from "./Toggle.svelte";
-import ToggleCore from "./ToggleCore.svelte";
-
-export default Toggle;
-export { ToggleCore };
+export { default } from "./Toggle.svelte";
+export { default as ToggleCore } from "./ToggleCore.svelte";
