@@ -37,13 +37,13 @@ npm i -D svelte-toggle
 
 ### Switch descriptors
 
-The toggle switch descriptors by setting `on` and `off`:
+Customize the toggle switch descriptors through the "on" and "off" props.
 
 ```svelte
 <Toggle on="On" off="Off" />
 ```
 
-Alternatively, use named slots:
+Alternatively, you can use named slots:
 
 ```svelte
 <Toggle on off>
@@ -109,6 +109,8 @@ Alternatively, use named slots:
 ```
 
 ### Fully controlled
+
+`ToggleCore` is an unstyled component that provides the accessibility attributes for the label and button elements.
 
 ```svelte
 <script>
