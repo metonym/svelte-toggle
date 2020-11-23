@@ -13,7 +13,7 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964a
 
 ## Install
 
-```sh
+```bash
 yarn add -D svelte-toggle
 # OR
 npm i -D svelte-toggle
@@ -32,7 +32,7 @@ npm i -D svelte-toggle
 
 <Toggle bind:toggled />
 
-{toggled ? 'Yes' : 'No'}
+<strong>Toggled? {toggled ? 'Yes' : 'No'}</strong>
 ```
 
 ### Switch descriptors
@@ -47,65 +47,31 @@ Alternatively, you can use named slots:
 
 ```svelte
 <Toggle on off>
-  <span slot="on">On</span>
-  <span slot="off">Off</span>
+  <span style="margin-left: .5rem" slot="on">"on" descriptor</span>
+  <span style="margin-left: .5rem" slot="off">"off" descriptor</span>
 </Toggle>
 ```
 
 ### Small variant
 
 ```svelte
-<script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-</script>
-
-<Toggle small label="My toggle label" on="On" off="Off" bind:toggled />
+<Toggle small />
 ```
 
 ### Custom colors
 
 ```svelte
-<script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-</script>
-
 <Toggle
-  label="My toggle label"
   switchColor="#eee"
   toggledColor="#24a148"
   untoggledColor="#fa4d56"
-  on="On"
-  off="Off"
-  bind:toggled
 />
 ```
 
 ### Hidden label
 
 ```svelte
-<script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-</script>
-
-<Toggle hideLabel label="My toggle label" on="On" off="Off" bind:toggled />
-```
-
-### Hidden label + omitted switch descriptors
-
-```svelte
-<script>
-  import Toggle from "svelte-toggle";
-
-  let toggled = true;
-</script>
-
-<Toggle hideLabel label="My toggle label" bind:toggled />
+<Toggle hideLabel label="My toggle label" />
 ```
 
 ### Fully controlled
@@ -115,8 +81,6 @@ Alternatively, you can use named slots:
 ```svelte
 <script>
   import { ToggleCore } from "svelte-toggle";
-
-  let toggled = true;
 </script>
 
 <ToggleCore {toggled} let:label let:button>
@@ -150,14 +114,22 @@ API for the default `Toggle` component.
 | toggledColor   | `string` (default: `"#0f62fe"`)                              |
 | untoggledColor | `string` (default: `"#8d8d8d"`)                              |
 
-## Dispatched event
+## Dispatched events
 
-```jsx
+The `Toggle` component dispatches a "change" event.
+
+```svelte
+<script>
+  let events = [];
+</script>
+
 <Toggle
   on:change={({ detail }) => {
-    console.log(detail.toggled); // true | false
+    events = [...events, detail.toggled];
   }}
 />
+
+<strong>Events:</strong> {events.join(', ')}
 ```
 
 ## Forwarded events
@@ -176,7 +148,7 @@ API for the default `Toggle` component.
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=blue
+[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%230f62fe
 [npm-url]: https://npmjs.com/package/svelte-toggle
 [build]: https://travis-ci.com/metonym/svelte-toggle.svg?branch=master
 [build-badge]: https://travis-ci.com/metonym/svelte-toggle
