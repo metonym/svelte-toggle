@@ -11,6 +11,12 @@ export default () => {
     return svelteReadme({
       minify: !DEV,
       prefixUrl: "https://github.com/metonym/svelte-toggle/tree/master/",
+      style: `
+        .code-fence > strong {
+          display: block;
+          margin-top: 1rem;
+        }
+      `,
     });
   }
 
