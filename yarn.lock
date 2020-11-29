@@ -198,11 +198,6 @@ function-bind@^1.1.1:
   resolved "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
   integrity sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==
 
-github-markdown-css@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/github-markdown-css/-/github-markdown-css-4.0.0.tgz#be9f4caf7a389228d4c368336260ffc909061f35"
-  integrity sha512-mH0bcIKv4XAN0mQVokfTdKo2OD5K8WJE9+lbMdM32/q0Ie5tXgVN/2o+zvToRMxSTUuiTRcLg5hzkFfOyBYreg==
-
 good-listener@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npmjs.org/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
@@ -359,10 +354,10 @@ prettier-plugin-svelte@^1.4.1:
   resolved "https://registry.npmjs.org/prettier-plugin-svelte/-/prettier-plugin-svelte-1.4.1.tgz#2f0f7a149190f476dc9b4ba9da8d482bd196f1e2"
   integrity sha512-6y0m37Xw01GRf/WIHau+Kp3uXj2JB1agtEmNVKb9opMy34A6OMOYhfneVpNIlrghQSw/jIV+t3e5Ngt4up2CMA==
 
-prettier@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.2.0.tgz#8a03c7777883b29b37fb2c4348c66a78e980418b"
-  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 prism-svelte@^0.4.7:
   version "0.4.7"
@@ -495,19 +490,18 @@ supports-color@^7.0.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-readme@^0.4.1:
-  version "0.4.1"
-  resolved "https://registry.npmjs.org/svelte-readme/-/svelte-readme-0.4.1.tgz#52b00a1b1cf46bef1f99d3c097557459620cfeb3"
-  integrity sha512-s9akhep31oUN4y6512dY+ldkTbVrgjrCPT7PMn6E2t9nsyq5ap+ozGa87Ir7fW7CLln1elXEJDaUfc4ouRH8pA==
+svelte-readme@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/svelte-readme/-/svelte-readme-1.1.0.tgz#35445fa0050a768126f45c20286e273559116a9b"
+  integrity sha512-4VwIYeuccsZGVoc1U7PKSBI6DrUG9e5Hn0QJ53aoremXLt7I6xE6hwtVJWHBmEyuEcJxQ0Xl4lv0Mfm1Gtjp/w==
   dependencies:
     "@rollup/plugin-node-resolve" "^10.0.0"
     "@rollup/plugin-virtual" "^2.0.3"
     fs-extra "^9.0.1"
-    github-markdown-css "^4.0.0"
     html-minifier "^4.0.0"
     is-relative-url "^3.0.0"
     markdown-it "^12.0.2"
-    prettier "^2.2.0"
+    prettier "^2.2.1"
     prettier-plugin-svelte "^1.4.1"
     prism-svelte "^0.4.7"
     prismjs "^1.22.0"

@@ -66,10 +66,16 @@ Alternatively, you can use named slots:
 />
 ```
 
+### Custom label
+
+```svelte
+<Toggle label="My toggle label" />
+```
+
 ### Hidden label
 
 ```svelte
-<Toggle hideLabel label="My toggle label" />
+<Toggle hideLabel />
 ```
 
 ### Fully controlled
@@ -146,7 +152,7 @@ The `Toggle` component dispatches a "change" event.
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%230f62fe
+[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%230f62fe&style=for-the-badge
 [npm-url]: https://npmjs.com/package/svelte-toggle
-[build]: https://travis-ci.com/metonym/svelte-toggle.svg?branch=master
+[build]: https://img.shields.io/travis/com/metonym/svelte-toggle?style=for-the-badge
 [build-badge]: https://travis-ci.com/metonym/svelte-toggle
