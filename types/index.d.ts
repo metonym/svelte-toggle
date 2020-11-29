@@ -1,2 +1,2 @@
-export { default } from "./Toggle";
 export { default as ToggleCore } from "./ToggleCore";
+export { default } from "./Toggle";

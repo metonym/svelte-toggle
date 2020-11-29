@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponent } from "svelte";
 
 export interface ToggleProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
   /**
@@ -52,20 +53,17 @@ export interface ToggleProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNam
   untoggledColor?: string;
 }
 
-export default class Toggle {
-  $$prop_def: ToggleProps;
-  $$slot_def: {
-    off: {};
-    on: {};
-  };
-
-  $on(eventname: "change", cb: (event: CustomEvent<{ toggled: boolean }>) => void): () => void;
-  $on(eventname: "click", cb: (event: WindowEventMap["click"]) => void): () => void;
-  $on(eventname: "mouseover", cb: (event: WindowEventMap["mouseover"]) => void): () => void;
-  $on(eventname: "mouseenter", cb: (event: WindowEventMap["mouseenter"]) => void): () => void;
-  $on(eventname: "mouseout", cb: (event: WindowEventMap["mouseout"]) => void): () => void;
-  $on(eventname: "focus", cb: (event: WindowEventMap["focus"]) => void): () => void;
-  $on(eventname: "blur", cb: (event: WindowEventMap["blur"]) => void): () => void;
-  $on(eventname: "keydown", cb: (event: WindowEventMap["keydown"]) => void): () => void;
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+export default class Toggle extends SvelteComponent<
+  ToggleProps,
+  {
+    toggle: CustomEvent<boolean>;
+    click: WindowEventMap["click"];
+    mouseover: WindowEventMap["mouseover"];
+    mouseenter: WindowEventMap["mouseenter"];
+    mouseout: WindowEventMap["mouseout"];
+    focus: WindowEventMap["focus"];
+    blur: WindowEventMap["blur"];
+    keydown: WindowEventMap["keydown"];
+  },
+  { default: { toggled: boolean } }
+> {}
