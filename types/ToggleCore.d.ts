@@ -1,4 +1,5 @@
 /// <reference types="svelte" />
+import { SvelteComponent } from "svelte";
 
 export interface ToggleCoreProps {
   /**
@@ -17,9 +18,10 @@ export interface ToggleCoreProps {
   disabled?: boolean;
 }
 
-export default class ToggleCore {
-  $$prop_def: ToggleCoreProps;
-  $$slot_def: {
+export default class ToggleCore extends SvelteComponent<
+  ToggleCoreProps,
+  {},
+  {
     default: {
       label: { for: string };
       button: {
@@ -31,7 +33,5 @@ export default class ToggleCore {
         [key: string]: any;
       };
     };
-  };
-
-  $on(eventname: string, cb: (event: Event) => void): () => void;
-}
+  }
+> {}

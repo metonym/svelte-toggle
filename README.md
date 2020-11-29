@@ -41,12 +41,11 @@ Customize the toggle switch descriptors through the "on" and "off" props.
 <Toggle on="On" off="Off" />
 ```
 
-Alternatively, you can use named slots:
+Alternatively, you can override the default slot:
 
 ```svelte
-<Toggle on off>
-  <span style="margin-left: .5rem" slot="on">"on" descriptor</span>
-  <span style="margin-left: .5rem" slot="off">"off" descriptor</span>
+<Toggle let:toggled>
+  <span style="margin-left: .5rem">{toggled ? "Yes" : "No"}</span>
 </Toggle>
 ```
 
@@ -120,7 +119,7 @@ API for the default `Toggle` component.
 
 ## Dispatched events
 
-The `Toggle` component dispatches a "change" event.
+The `Toggle` component dispatches a "toggle" event.
 
 ```svelte
 <script>
@@ -128,12 +127,12 @@ The `Toggle` component dispatches a "change" event.
 </script>
 
 <Toggle
-  on:change={({ detail }) => {
-    events = [...events, detail.toggled];
+  on:toggle={(e) => {
+    events = [...events, e.detail];
   }}
 />
 
-<strong>Events:</strong> {events.join(', ')}
+<strong>on:toggle</strong> {events.join(', ')}
 ```
 
 ## Forwarded events

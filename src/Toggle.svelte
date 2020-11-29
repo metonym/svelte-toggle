@@ -1,4 +1,8 @@
 <script>
+  /**
+   * @slot {{ toggled: boolean; }}
+   */
+
   export let label = "Label";
   export let hideLabel = false;
   export let small = false;
@@ -26,9 +30,9 @@
   const dispatch = createEventDispatcher();
 
   /**
-   * @event {{ toggled: boolean; }} change
+   * @event {boolean} toggle
    */
-  $: dispatch("change", { toggled });
+  $: dispatch("toggle", toggled);
 </script>
 
 <style>
@@ -136,12 +140,8 @@
       on:focus
       on:blur
       on:keydown />
-    {#if toggled}
-      {#if on}
-        <slot name="on"><span>{on}</span></slot>
-      {/if}
-    {:else if off}
-      <slot name="off"><span>{off}</span></slot>
-    {/if}
+    <slot {toggled}>
+      {#if on && off}<span>{toggled ? on : off}</span>{/if}
+    </slot>
   </div>
 </ToggleCore>

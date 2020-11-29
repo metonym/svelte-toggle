@@ -9,6 +9,7 @@ const BUNDLE = process.env.BUNDLE === "true";
 export default () => {
   if (!BUNDLE) {
     return svelteReadme({
+      svelte: { immutable: true },
       minify: !DEV,
       prefixUrl: "https://github.com/metonym/svelte-toggle/tree/master/",
       style: `
