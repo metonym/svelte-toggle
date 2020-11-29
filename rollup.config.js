@@ -30,6 +30,7 @@ export default () => {
         format,
         file: UMD ? pkg.main : pkg.module,
         name: UMD ? pkg.name : undefined,
+        exports: "named",
       },
       plugins: [svelte(), resolve()],
     };
