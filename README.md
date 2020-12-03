@@ -145,6 +145,10 @@ The `Toggle` component dispatches a "toggle" event.
 - on:blur
 - on:keydown
 
+## TypeScript
+
+To use this component with TypeScript, you will need `svelte` version 3.31 or greater.
+
 ## [Changelog](CHANGELOG.md)
 
 ## License

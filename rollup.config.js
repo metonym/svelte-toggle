@@ -9,7 +9,7 @@ const BUNDLE = process.env.BUNDLE === "true";
 export default () => {
   if (!BUNDLE) {
     return svelteReadme({
-      svelte: { immutable: true },
+      svelte: { dev: DEV, immutable: true },
       minify: !DEV,
       prefixUrl: "https://github.com/metonym/svelte-toggle/tree/master/",
       style: `
@@ -32,7 +32,7 @@ export default () => {
         name: UMD ? pkg.name : undefined,
         exports: "named",
       },
-      plugins: [svelte(), resolve()],
+      plugins: [svelte({ emitCss: false }), resolve()],
     };
   });
 };
