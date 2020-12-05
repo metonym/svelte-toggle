@@ -59,12 +59,8 @@ export default class Toggle extends SvelteComponentTyped<
   {
     toggle: CustomEvent<boolean>;
     click: WindowEventMap["click"];
-    mouseover: WindowEventMap["mouseover"];
-    mouseenter: WindowEventMap["mouseenter"];
-    mouseout: WindowEventMap["mouseout"];
     focus: WindowEventMap["focus"];
     blur: WindowEventMap["blur"];
-    keydown: WindowEventMap["keydown"];
   },
   { default: { toggled: boolean } }
 > {}
