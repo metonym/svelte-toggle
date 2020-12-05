@@ -12,13 +12,13 @@
   on:toggle={(e) => {
     console.log(e.detail); // boolean
   }}
-  on:click={e => {
+  on:click={(e) => {
     console.log(e); // MouseEvent
   }}
-  on:focus={e => {
+  on:focus={(e) => {
     console.log(e); // FocusEvent
   }}
-  on:blur={e => {
+  on:blur={(e) => {
     console.log(e); // FocusEvent
   }} />
 
