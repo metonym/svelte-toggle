@@ -138,12 +138,8 @@ The `Toggle` component dispatches a "toggle" event.
 ## Forwarded events
 
 - on:click
-- on:mouseover
-- on:mouseenter
-- on:mouseout
 - on:focus
 - on:blur
-- on:keydown
 
 ## TypeScript
 
