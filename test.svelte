@@ -10,7 +10,16 @@
   on="On"
   off="Off"
   on:toggle={(e) => {
-    console.log(e.detail);
+    console.log(e.detail); // boolean
+  }}
+  on:click={(e) => {
+    console.log(e); // MouseEvent
+  }}
+  on:focus={(e) => {
+    console.log(e); // FocusEvent
+  }}
+  on:blur={(e) => {
+    console.log(e); // FocusEvent
   }} />
 
 <Toggle let:toggled={isToggled}>

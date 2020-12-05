@@ -134,12 +134,8 @@
       {disabled}
       on:click
       on:click={() => (toggled = !toggled)}
-      on:mouseover
-      on:mouseenter
-      on:mouseout
       on:focus
-      on:blur
-      on:keydown />
+      on:blur />
     <slot {toggled}>
       {#if on && off}<span>{toggled ? on : off}</span>{/if}
     </slot>
