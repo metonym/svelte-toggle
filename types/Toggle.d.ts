@@ -1,7 +1,8 @@
 /// <reference types="svelte" />
-import { SvelteComponent } from "svelte";
+import { SvelteComponentTyped } from "svelte";
 
-export interface ToggleProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
+export interface ToggleProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
   /**
    * @default "Label"
    */
@@ -53,7 +54,7 @@ export interface ToggleProps extends svelte.JSX.HTMLAttributes<HTMLElementTagNam
   untoggledColor?: string;
 }
 
-export default class Toggle extends SvelteComponent<
+export default class Toggle extends SvelteComponentTyped<
   ToggleProps,
   {
     toggle: CustomEvent<boolean>;

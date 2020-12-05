@@ -1,5 +1,5 @@
 /// <reference types="svelte" />
-import { SvelteComponent } from "svelte";
+import { SvelteComponentTyped } from "svelte";
 
 export interface ToggleCoreProps {
   /**
@@ -18,7 +18,7 @@ export interface ToggleCoreProps {
   disabled?: boolean;
 }
 
-export default class ToggleCore extends SvelteComponent<
+export default class ToggleCore extends SvelteComponentTyped<
   ToggleCoreProps,
   {},
   {
