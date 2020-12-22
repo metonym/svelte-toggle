@@ -11,7 +11,6 @@ export default () => {
     return svelteReadme({
       svelte: { dev: DEV, immutable: true },
       minify: !DEV,
-      prefixUrl: "https://github.com/metonym/svelte-toggle/tree/master/",
       style: `
         .code-fence > strong {
           display: block;

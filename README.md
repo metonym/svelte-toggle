@@ -9,6 +9,8 @@ This component implements best practices from the [Inclusive Components guide](h
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61?version=3.24.1).
 
+<!-- TOC -->
+
 ## Install
 
 ```bash
@@ -117,7 +119,7 @@ API for the default `Toggle` component.
 | toggledColor   | `string` (default: `"#0f62fe"`)                              |
 | untoggledColor | `string` (default: `"#8d8d8d"`)                              |
 
-## Dispatched events
+### Dispatched events
 
 The `Toggle` component dispatches a "toggle" event.
 
@@ -135,7 +137,7 @@ The `Toggle` component dispatches a "toggle" event.
 <strong>on:toggle</strong> {events.join(', ')}
 ```
 
-## Forwarded events
+### Forwarded events
 
 - on:click
 - on:focus
@@ -145,7 +147,9 @@ The `Toggle` component dispatches a "toggle" event.
 
 To use this component with TypeScript, you will need `svelte` version 3.31 or greater.
 
-## [Changelog](CHANGELOG.md)
+## Changelog
+
+[CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
