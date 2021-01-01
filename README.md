@@ -1,7 +1,6 @@
 # svelte-toggle
 
 [![NPM][npm]][npm-url]
-[![Build][build]][build-badge]
 
 > Accessible toggle switch component for Svelte.
 
@@ -23,6 +22,7 @@ npm i -D svelte-toggle
 
 ### Basic
 
+<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Toggle from "svelte-toggle";
@@ -34,31 +34,39 @@ npm i -D svelte-toggle
 
 <strong>Toggled? {toggled ? 'Yes' : 'No'}</strong>
 ```
+<!-- prettier-ignore-end -->
 
 ### Switch descriptors
 
 Customize the toggle switch descriptors through the "on" and "off" props.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle on="On" off="Off" />
 ```
+<!-- prettier-ignore-end -->
 
 Alternatively, you can override the default slot:
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle let:toggled>
   <span style="margin-left: .5rem">{toggled ? "Yes" : "No"}</span>
 </Toggle>
 ```
+<!-- prettier-ignore-end -->
 
 ### Small variant
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle small />
 ```
+<!-- prettier-ignore-end -->
 
 ### Custom colors
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle
   switchColor="#eee"
@@ -66,23 +74,29 @@ Alternatively, you can override the default slot:
   untoggledColor="#fa4d56"
 />
 ```
+<!-- prettier-ignore-end -->
 
 ### Custom label
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle label="My toggle label" />
 ```
+<!-- prettier-ignore-end -->
 
 ### Hidden label
 
+<!-- prettier-ignore-start -->
 ```svelte
 <Toggle hideLabel />
 ```
+<!-- prettier-ignore-end -->
 
 ### Fully controlled
 
 `ToggleCore` is an unstyled component that provides the accessibility attributes for the label and button elements.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import { ToggleCore } from "svelte-toggle";
@@ -100,10 +114,13 @@ Alternatively, you can override the default slot:
   </button>
 </ToggleCore>
 ```
+<!-- prettier-ignore-end -->
 
 ## API
 
 API for the default `Toggle` component.
+
+### Props
 
 | Prop name      | Value                                                        |
 | :------------- | :----------------------------------------------------------- |
@@ -123,6 +140,7 @@ API for the default `Toggle` component.
 
 The `Toggle` component dispatches a "toggle" event.
 
+<!-- prettier-ignore-start -->
 ```svelte
 <script>
   let events = [];
@@ -136,6 +154,7 @@ The `Toggle` component dispatches a "toggle" event.
 
 <strong>on:toggle</strong> {events.join(', ')}
 ```
+<!-- prettier-ignore-end -->
 
 ### Forwarded events
 
@@ -157,5 +176,3 @@ To use this component with TypeScript, you will need `svelte` version 3.31 or gr
 
 [npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%230f62fe&style=for-the-badge
 [npm-url]: https://npmjs.com/package/svelte-toggle
-[build]: https://img.shields.io/travis/com/metonym/svelte-toggle?style=for-the-badge
-[build-badge]: https://travis-ci.com/metonym/svelte-toggle
