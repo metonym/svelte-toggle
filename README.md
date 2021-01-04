@@ -1,5 +1,7 @@
 # svelte-toggle
 
+<!-- REPO_URL -->
+
 [![NPM][npm]][npm-url]
 
 > Accessible toggle switch component for Svelte.
