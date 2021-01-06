@@ -1,7 +1,5 @@
 # svelte-toggle
 
-<!-- REPO_URL -->
-
 [![NPM][npm]][npm-url]
 
 > Accessible toggle switch component for Svelte.
@@ -9,6 +7,10 @@
 This component implements best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61?version=3.24.1).
+
+<!-- REPO_URL -->
+
+---
 
 <!-- TOC -->
 
@@ -34,7 +36,7 @@ npm i -D svelte-toggle
 
 <Toggle bind:toggled />
 
-<strong>Toggled? {toggled ? 'Yes' : 'No'}</strong>
+Toggled? {toggled ? 'Yes' : 'No'}
 ```
 <!-- prettier-ignore-end -->
 
@@ -53,7 +55,7 @@ Alternatively, you can override the default slot:
 <!-- prettier-ignore-start -->
 ```svelte
 <Toggle let:toggled>
-  <span style="margin-left: .5rem">{toggled ? "Yes" : "No"}</span>
+  <strong style="margin-left: 0.5rem">{toggled ? "Yes" : "No"}</strong>
 </Toggle>
 ```
 <!-- prettier-ignore-end -->
@@ -82,7 +84,7 @@ Alternatively, you can override the default slot:
 
 <!-- prettier-ignore-start -->
 ```svelte
-<Toggle label="My toggle label" />
+<Toggle label="Custom label" />
 ```
 <!-- prettier-ignore-end -->
 
@@ -90,7 +92,7 @@ Alternatively, you can override the default slot:
 
 <!-- prettier-ignore-start -->
 ```svelte
-<Toggle hideLabel />
+<Toggle hideLabel label="Custom label" />
 ```
 <!-- prettier-ignore-end -->
 
@@ -166,7 +168,7 @@ The `Toggle` component dispatches a "toggle" event.
 
 ## TypeScript
 
-To use this component with TypeScript, you will need `svelte` version 3.31 or greater.
+Svelte version 3.31 or greater is required to use this component with TypeScript.
 
 ## Changelog
 
@@ -176,5 +178,5 @@ To use this component with TypeScript, you will need `svelte` version 3.31 or gr
 
 [MIT](LICENSE)
 
-[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%230f62fe&style=for-the-badge
+[npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%23ff3e00&style=for-the-badge
 [npm-url]: https://npmjs.com/package/svelte-toggle
