@@ -150,13 +150,9 @@ The `Toggle` component dispatches a "toggle" event.
   let events = [];
 </script>
 
-<Toggle
-  on:toggle={(e) => {
-    events = [...events, e.detail];
-  }}
-/>
+<Toggle on:toggle={(e) => (events = [...events, e.detail])} />
 
-<strong>on:toggle</strong> {events.join(', ')}
+on:toggle: {events.join(', ')}
 ```
 <!-- prettier-ignore-end -->
 

@@ -11,6 +11,10 @@ export default () => {
           display: block;
           margin-top: 1rem;
         }
+
+        .code-fence > div {
+          margin-bottom: 16px;
+        }
       `,
     });
   }
