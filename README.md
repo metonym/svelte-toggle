@@ -4,11 +4,11 @@
 
 > Accessible toggle switch component for Svelte.
 
+<!-- REPO_URL -->
+
 This component implements best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
 
-Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61?version=3.24.1).
-
-<!-- REPO_URL -->
+Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61).
 
 ---
 
@@ -26,7 +26,6 @@ npm i -D svelte-toggle
 
 ### Basic
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import Toggle from "svelte-toggle";
@@ -36,71 +35,74 @@ npm i -D svelte-toggle
 
 <Toggle bind:toggled />
 
-Toggled? {toggled ? 'Yes' : 'No'}
+Toggled? {toggled ? "Yes" : "No"}
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Switch descriptors
 
 Customize the toggle switch descriptors through the "on" and "off" props.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Toggle on="On" off="Off" />
+
 ```
-<!-- prettier-ignore-end -->
 
 Alternatively, you can override the default slot:
 
-<!-- prettier-ignore-start -->
 ```svelte
 <Toggle let:toggled>
   <strong style="margin-left: 0.5rem">{toggled ? "Yes" : "No"}</strong>
 </Toggle>
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Small variant
 
-<!-- prettier-ignore-start -->
+Set `small` to `true` to use the small size variant.
+
 ```svelte
 <Toggle small />
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Custom colors
 
-<!-- prettier-ignore-start -->
+Customize the switch colors:
+
+- `switchColor` (default: `#fff`)
+- `toggledColor` (default: `#0f62fe`)
+- `untoggledColor` (default: `#8d8d8d`)
+
 ```svelte
-<Toggle
-  switchColor="#eee"
-  toggledColor="#24a148"
-  untoggledColor="#fa4d56"
-/>
+<Toggle switchColor="#eee" toggledColor="#24a148" untoggledColor="#fa4d56" />
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Custom label
 
-<!-- prettier-ignore-start -->
+Customize the label text through the `label` prop.
+
 ```svelte
 <Toggle label="Custom label" />
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Hidden label
 
-<!-- prettier-ignore-start -->
+Set `hideLabel` to `true` to visually hide the label.
+
+**Note**: If hiding the label, you should still define a `label` value for accessibility reasons.
+
 ```svelte
 <Toggle hideLabel label="Custom label" />
+
 ```
-<!-- prettier-ignore-end -->
 
 ### Fully controlled
 
 `ToggleCore` is an unstyled component that provides the accessibility attributes for the label and button elements.
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   import { ToggleCore } from "svelte-toggle";
@@ -114,11 +116,11 @@ Alternatively, you can override the default slot:
     on:click={() => {
       toggled = !toggled;
     }}>
-    {toggled ? 'On' : 'Off'}
+    {toggled ? "On" : "Off"}
   </button>
 </ToggleCore>
+
 ```
-<!-- prettier-ignore-end -->
 
 ## API
 
