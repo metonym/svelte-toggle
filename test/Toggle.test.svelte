@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Toggle, { ToggleCore } from "./types";
+  import Toggle, { ToggleCore } from "../types";
 
   let toggled = true;
 </script>
@@ -20,10 +20,11 @@
   }}
   on:blur={(e) => {
     console.log(e); // FocusEvent
-  }} />
+  }}
+/>
 
 <Toggle let:toggled={isToggled}>
-  <span style="margin-left: .5rem">{isToggled ? 'Yes' : 'No'}</span>
+  <span style="margin-left: .5rem">{isToggled ? "Yes" : "No"}</span>
 </Toggle>
 
 <ToggleCore {toggled} let:label let:button>
@@ -34,6 +35,6 @@
     on:click={() => {
       toggled = !toggled;
     }}>
-    {toggled ? 'On' : 'Off'}
+    {toggled ? "On" : "Off"}
   </button>
 </ToggleCore>
