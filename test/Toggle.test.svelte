@@ -4,6 +4,7 @@
   let toggled = true;
 </script>
 
+<!-- svelte-ignore missing-declaration -->
 <Toggle
   label="label"
   hideLabel
@@ -23,10 +24,12 @@
   }}
 />
 
+<!-- svelte-ignore missing-declaration -->
 <Toggle let:toggled={isToggled}>
   <span style="margin-left: .5rem">{isToggled ? "Yes" : "No"}</span>
 </Toggle>
 
+<!-- svelte-ignore missing-declaration -->
 <ToggleCore {toggled} let:label let:button>
   <!-- svelte-ignore a11y-label-has-associated-control -->
   <label {...label}>Label</label>
@@ -34,7 +37,8 @@
     {...button}
     on:click={() => {
       toggled = !toggled;
-    }}>
+    }}
+  >
     {toggled ? "On" : "Off"}
   </button>
 </ToggleCore>
