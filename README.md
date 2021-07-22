@@ -14,11 +14,17 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964a
 
 <!-- TOC -->
 
-## Install
+## Installation
+
+**Yarn**
 
 ```bash
 yarn add -D svelte-toggle
-# OR
+```
+
+**NPM**
+
+```bash
 npm i -D svelte-toggle
 ```
 
@@ -36,7 +42,6 @@ npm i -D svelte-toggle
 <Toggle bind:toggled />
 
 Toggled? {toggled ? "Yes" : "No"}
-
 ```
 
 ### Switch descriptors
@@ -45,7 +50,6 @@ Customize the toggle switch descriptors through the "on" and "off" props.
 
 ```svelte
 <Toggle on="On" off="Off" />
-
 ```
 
 Alternatively, you can override the default slot:
@@ -54,7 +58,6 @@ Alternatively, you can override the default slot:
 <Toggle let:toggled>
   <strong style="margin-left: 0.5rem">{toggled ? "Yes" : "No"}</strong>
 </Toggle>
-
 ```
 
 ### Small variant
@@ -63,7 +66,6 @@ Set `small` to `true` to use the small size variant.
 
 ```svelte
 <Toggle small />
-
 ```
 
 ### Custom colors
@@ -76,7 +78,6 @@ Customize the switch colors:
 
 ```svelte
 <Toggle switchColor="#eee" toggledColor="#24a148" untoggledColor="#fa4d56" />
-
 ```
 
 ### Custom label
@@ -85,7 +86,6 @@ Customize the label text through the `label` prop.
 
 ```svelte
 <Toggle label="Custom label" />
-
 ```
 
 ### Hidden label
@@ -96,7 +96,6 @@ Set `hideLabel` to `true` to visually hide the label.
 
 ```svelte
 <Toggle hideLabel label="Custom label" />
-
 ```
 
 ### Fully controlled
@@ -117,11 +116,11 @@ Set `hideLabel` to `true` to visually hide the label.
     {...button}
     on:click={() => {
       isToggled = !isToggled;
-    }}>
+    }}
+  >
     {isToggled ? "On" : "Off"}
   </button>
 </ToggleCore>
-
 ```
 
 ## API
@@ -169,6 +168,8 @@ on:toggle: {events.join(', ')}
 ## TypeScript
 
 Svelte version 3.31 or greater is required to use this component with TypeScript.
+
+TypeScript definitions are located in the [types folder](./types).
 
 ## Changelog
 
