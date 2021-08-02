@@ -129,25 +129,24 @@ API for the default `Toggle` component.
 
 ### Props
 
-| Prop name      | Value                                                        |
-| :------------- | :----------------------------------------------------------- |
-| id             | `string` (default: `"toggle" + Math.random().toString(36)"`) |
-| label          | `string` (default: `"Label"`)                                |
-| hideLabel      | `boolean` (default: `false`)                                 |
-| small          | `boolean` (default: `false`)                                 |
-| toggled        | `boolean` (default: `true`)                                  |
-| disabled       | `boolean` (default: `false`)                                 |
-| on             | `string` (default: `undefined`)                              |
-| off            | `string` (default: `undefined`)                              |
-| switchColor    | `string` (default: `"#fff"`)                                 |
-| toggledColor   | `string` (default: `"#0f62fe"`)                              |
-| untoggledColor | `string` (default: `"#8d8d8d"`)                              |
+| Prop name      | Type      | Default value                            |
+| :------------- | :-------- | :--------------------------------------- |
+| id             | `string`  | `"toggle" + Math.random().toString(36)"` |
+| label          | `string`  | `"Label"`                                |
+| hideLabel      | `boolean` | `false`                                  |
+| small          | `boolean` | `false`                                  |
+| toggled        | `boolean` | `true`                                   |
+| disabled       | `boolean` | `false`                                  |
+| on             | `string`  | `undefined`                              |
+| off            | `string`  | `undefined`                              |
+| switchColor    | `string`  | `"#fff"`                                 |
+| toggledColor   | `string`  | `"#0f62fe"`                              |
+| untoggledColor | `string`  | `"#8d8d8d"`                              |
 
 ### Dispatched events
 
-The `Toggle` component dispatches a "toggle" event.
+- **on:toggle**: fired whenever `toggled` changes
 
-<!-- prettier-ignore-start -->
 ```svelte
 <script>
   let events = [];
@@ -155,9 +154,8 @@ The `Toggle` component dispatches a "toggle" event.
 
 <Toggle on:toggle={(e) => (events = [...events, e.detail])} />
 
-on:toggle: {events.join(', ')}
+on:toggle: {events.join(", ")}
 ```
-<!-- prettier-ignore-end -->
 
 ### Forwarded events
 
