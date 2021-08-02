@@ -12,13 +12,14 @@
   "scripts": {
     "dev": "rollup -cw",
     "predeploy": "rollup -c",
-    "deploy": "npx gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
     "prepack": "BUNDLE=true rollup -c",
-    "test": "svelte-check --workspace=test"
+    "test": "svelte-check --workspace=test/*"
   },
   "devDependencies": {
-    "svelte": "^3.40.1",
-    "svelte-check": "^2.2.3",
+    "gh-pages": "^3.2.3",
+    "svelte": "^3.41.0",
+    "svelte-check": "^2.2.4",
     "svelte-readme": "^3.2.0"
   },
   "repository": {
