@@ -41,12 +41,12 @@ npm i -D svelte-toggle
 
 <Toggle bind:toggled />
 
-Toggled? {toggled ? "Yes" : "No"}
+Toggled? {toggled}
 ```
 
 ### Switch descriptors
 
-Customize the toggle switch descriptors through the "on" and "off" props.
+Customize the toggle switch descriptors using the `"on"` and `"off"` props.
 
 ```svelte
 <Toggle on="On" off="Off" />
