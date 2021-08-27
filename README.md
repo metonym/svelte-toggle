@@ -179,3 +179,7 @@ TypeScript definitions are located in the [types folder](./types).
 
 [npm]: https://img.shields.io/npm/v/svelte-toggle.svg?color=%23ff3e00&style=for-the-badge
 [npm-url]: https://npmjs.com/package/svelte-toggle
+
+<a href="https://render.com/deploy?repo=https://github.com/metonym/svelte-toggle">
+  <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
+</a>
