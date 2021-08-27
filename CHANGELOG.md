@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+- add `data-svelte-toggle` attribute for targeted styles
+
 ## [3.0.1](https://github.com/metonym/svelte-toggle/releases/tag/v3.0.1) - 2021-08-02
 
 **Documentation**
@@ -16,15 +20,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 **Breaking Changes**
 
 - remove forwarded mouse, keydown events from `Toggle`
-- TypeScript: use `SvelteComponentTyped` instead of `SvelteComponent` (requires Svelte >=v3.31)
+- use `SvelteComponentTyped` instead of `SvelteComponent` in TypeScript definitions (requires Svelte version >=3.31)
 
 ## [2.0.0](https://github.com/metonym/svelte-toggle/releases/tag/v2.0.0) - 2020-11-29
 
 **Breaking Changes**
 
-- Dispatched "change" event has been removed; use `on:toggle` instead
-- Named "on" and "off" slots have been removed; override the default slot and destructure the `toggled` prop
-- TypeScript users will need Svelte version 3.30 or greater
+- remove dispatched "change" event; use `on:toggle` instead
+- remove named "on" and "off" slots; override the default slot and destructure the `toggled` prop (`<Toggle let:toggled>{toggled}</Toggle>`)
 
 ## [1.1.0](https://github.com/metonym/svelte-toggle/releases/tag/v1.1.0) - 2020-11-17
 
@@ -43,8 +46,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 **Breaking Changes**
 
-- `on` / `off` props are optional and must be truthy to use named slots
+- make `on` / `off` props optional; values must be truthy to use named slots
 
 ## [0.1.0](https://github.com/metonym/svelte-toggle/releases/tag/v0.1.0) - 2020-04-22
 
-- Initial release
+- initial release
