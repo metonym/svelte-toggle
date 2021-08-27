@@ -11,13 +11,11 @@
   "sideEffects": false,
   "scripts": {
     "dev": "rollup -cw",
-    "predeploy": "rollup -c",
-    "deploy": "gh-pages -d dist",
+    "build": "rollup -c",
     "prepack": "BUNDLE=true rollup -c",
     "test": "svelte-check --workspace=test/*"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
     "svelte": "^3.42.4",
     "svelte-check": "^2.2.5",
     "svelte-readme": "^3.3.0"
