@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - add `data-svelte-toggle` attribute for targeted styles
 
+## [3.0.2](https://github.com/metonym/svelte-toggle/releases/tag/v3.0.2) - 2021-08-27
+
+**Documentation**
+
+- simplify Basic/Switch Descriptors examples in README
+- add two way binding example
+
 ## [3.0.1](https://github.com/metonym/svelte-toggle/releases/tag/v3.0.1) - 2021-08-02
 
 **Documentation**
