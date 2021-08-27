@@ -44,6 +44,14 @@ npm i -D svelte-toggle
 Toggled? {toggled}
 ```
 
+The `toggled` prop supports two way binding.
+
+```svelte
+<Toggle bind:toggled />
+
+<button on:click={() => (toggled = !toggled)}>Toggle</button>
+```
+
 ### Switch descriptors
 
 Customize the toggle switch descriptors using the `"on"` and `"off"` props.
@@ -56,7 +64,7 @@ Alternatively, you can override the default slot:
 
 ```svelte
 <Toggle let:toggled>
-  <strong style="margin-left: 0.5rem">{toggled ? "Yes" : "No"}</strong>
+  <strong>{toggled ? "Yes" : "No"}</strong>
 </Toggle>
 ```
 
@@ -92,7 +100,7 @@ Customize the label text through the `label` prop.
 
 Set `hideLabel` to `true` to visually hide the label.
 
-**Note**: If hiding the label, you should still define a `label` value for accessibility reasons.
+**Note**: You should still provide a `label` value for [accessibility](https://www.w3.org/WAI/tutorials/forms/labels/#hiding-label-text).
 
 ```svelte
 <Toggle hideLabel label="Custom label" />
@@ -100,7 +108,7 @@ Set `hideLabel` to `true` to visually hide the label.
 
 ### Fully controlled
 
-`ToggleCore` is an unstyled component that provides the accessibility attributes for the label and button elements.
+`ToggleCore` is an unstyled component that provides the accessibility attributes for the `label` and `button` elements.
 
 ```svelte
 <script>

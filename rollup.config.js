@@ -15,6 +15,10 @@ export default () => {
         .code-fence > div {
           margin-bottom: 16px;
         }
+
+        .code-fence strong {
+          margin-left: 0.5rem;
+        }
       `,
     });
   }
