@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: svelte-toggle
+    env: static
+    buildCommand: yarn && yarn rollup -c
+    staticPublishPath: dist
+    pullRequestPreviewsEnabled: true
