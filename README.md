@@ -6,7 +6,7 @@
 
 <!-- REPO_URL -->
 
-This component implements best practices from the [Inclusive Components guide](https://inclusive-components.design/toggle-button/) for toggle buttons.
+This component implements accessibility practices for toggle buttons recommended by the [Inclusive Components guide](https://inclusive-components.design/toggle-button/).
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61).
 
