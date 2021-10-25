@@ -157,6 +157,8 @@ API for the default `Toggle` component.
 
 ```svelte
 <script>
+  import Toggle from "svelte-toggle";
+
   let events = [];
 </script>
 
