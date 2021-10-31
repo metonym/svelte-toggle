@@ -1,8 +1,4 @@
 <script>
-  /**
-   * @slot {{ toggled: boolean; }}
-   */
-
   export let label = "Label";
   export let hideLabel = false;
   export let small = false;
@@ -29,11 +25,33 @@
 
   const dispatch = createEventDispatcher();
 
-  /**
-   * @event {boolean} toggle
-   */
   $: dispatch("toggle", toggled);
 </script>
+
+<ToggleCore bind:toggled let:label={labelProps} let:button>
+  <!-- svelte-ignore a11y-label-has-associated-control -->
+  <label {...labelProps} class:hideLabel>{label}</label>
+
+  <div>
+    <button
+      class:small
+      {...$$restProps}
+      {...button}
+      style="color: {switchColor}; background-color: {toggled
+        ? toggledColor
+        : untoggledColor};
+      {$$restProps.style}"
+      {disabled}
+      on:click
+      on:click={() => (toggled = !toggled)}
+      on:focus
+      on:blur
+    />
+    <slot {toggled}>
+      {#if on && off}<span>{toggled ? on : off}</span>{/if}
+    </slot>
+  </div>
+</ToggleCore>
 
 <style>
   label {
@@ -119,25 +137,3 @@
     margin-left: 0.5rem;
   }
 </style>
-
-<ToggleCore bind:toggled let:label={labelProps} let:button>
-  <!-- svelte-ignore a11y-label-has-associated-control -->
-  <label {...labelProps} class:hideLabel>{label}</label>
-
-  <div>
-    <button
-      class:small
-      {...$$restProps}
-      {...button}
-      style="color: {switchColor}; background-color: {toggled ? toggledColor : untoggledColor};
-      {$$restProps.style}"
-      {disabled}
-      on:click
-      on:click={() => (toggled = !toggled)}
-      on:focus
-      on:blur />
-    <slot {toggled}>
-      {#if on && off}<span>{toggled ? on : off}</span>{/if}
-    </slot>
-  </div>
-</ToggleCore>
