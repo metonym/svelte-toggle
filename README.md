@@ -120,19 +120,14 @@ Set `hideLabel` to `true` to visually hide the label.
 <script>
   import { ToggleCore } from "svelte-toggle";
 
-  let isToggled = false;
+  let on = false;
 </script>
 
-<ToggleCore toggled={isToggled} let:label let:button>
+<ToggleCore toggled={on} let:label let:button>
   <!-- svelte-ignore a11y-label-has-associated-control -->
   <label {...label}>Label</label>
-  <button
-    {...button}
-    on:click={() => {
-      isToggled = !isToggled;
-    }}
-  >
-    {isToggled ? "On" : "Off"}
+  <button {...button} on:click={() => (on = !on)}>
+    {on ? "On" : "Off"}
   </button>
 </ToggleCore>
 ```
