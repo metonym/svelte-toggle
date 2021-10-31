@@ -30,7 +30,7 @@
 </Toggle>
 
 <!-- svelte-ignore missing-declaration -->
-<ToggleCore {toggled} let:label let:button>
+<ToggleCore {toggled} type="button" let:label let:button>
   <!-- svelte-ignore a11y-label-has-associated-control -->
   <label {...label}>Label</label>
   <button

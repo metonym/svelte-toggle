@@ -1,18 +1,22 @@
 /// <reference types="svelte" />
 import { SvelteComponentTyped } from "svelte";
 
-export interface ToggleCoreProps {
+export interface ToggleCoreProps
+  extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
   /**
+   * Specify the id
    * @default "toggle" + Math.random().toString(36)
    */
   id?: string;
 
   /**
+   * Specify whether the toggle switch is toggled
    * @default true
    */
   toggled?: boolean;
 
   /**
+   * Set to `true` to disable the button
    * @default false
    */
   disabled?: boolean;
