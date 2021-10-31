@@ -9,6 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - add `data-svelte-toggle` attribute for targeted styles
 
+## [3.1.0](https://github.com/metonym/svelte-toggle/releases/tag/v3.1.0) - 2021-10-31
+
+**Features**
+
+- complete JSDoc/TypeScript prop descriptions
+
+**Fixes**
+
+- `ToggleCore.d.ts` props should extend `button` HTML attributes
+
+**Documentation**
+
+- add disabled toggle example
+
 ## [3.0.3](https://github.com/metonym/svelte-toggle/releases/tag/v3.0.3) - 2021-10-31
 
 **Documentation**
