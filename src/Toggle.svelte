@@ -1,8 +1,27 @@
 <script>
-  export let label = "Label";
-  export let hideLabel = false;
-  export let small = false;
+  /**
+   * Specify whether the toggle switch is toggled
+   */
   export let toggled = true;
+
+  /**
+   * Specify the label text
+   */
+  export let label = "Label";
+
+  /**
+   * Set to `true` to visually hide the label
+   */
+  export let hideLabel = false;
+
+  /**
+   * Set to `true` to use the small variant
+   */
+  export let small = false;
+
+  /**
+   * Set to `true` to disable the button
+   */
   export let disabled = false;
 
   /**
@@ -16,8 +35,20 @@
    * @type {string}
    */
   export let off = undefined;
+
+  /**
+   * Specify the switch color
+   */
   export let switchColor = "#fff";
+
+  /**
+   * Specify the toggled switch background color
+   */
   export let toggledColor = "#0f62fe";
+
+  /**
+   * Specify the untoggled switch background color
+   */
   export let untoggledColor = "#8d8d8d";
 
   import { createEventDispatcher } from "svelte";
@@ -31,7 +62,6 @@
 <ToggleCore bind:toggled let:label={labelProps} let:button>
   <!-- svelte-ignore a11y-label-has-associated-control -->
   <label {...labelProps} class:hideLabel>{label}</label>
-
   <div>
     <button
       class:small

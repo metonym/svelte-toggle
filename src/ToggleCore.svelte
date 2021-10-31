@@ -1,10 +1,17 @@
 <script>
   /**
-   * @slot {{ label: { for: string; }; button: { id: string; disabled: boolean; "aria-checked": boolean; type: "button"; role: "switch"; [key: string]: any; } }}
+   * Specify the id
    */
-
   export let id = "toggle" + Math.random().toString(36);
+
+  /**
+   * Specify whether the toggle switch is toggled
+   */
   export let toggled = true;
+
+  /**
+   * Set to `true` to disable the button
+   */
   export let disabled = false;
 
   $: label = { for: id };
