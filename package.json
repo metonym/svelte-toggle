@@ -1,6 +1,6 @@
 {
   "name": "svelte-toggle",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "license": "MIT",
   "description": "Accessible toggle switch component",
   "author": "Eric Liu (https://github.com/metonym)",
