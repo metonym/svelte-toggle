@@ -112,6 +112,14 @@ Set `hideLabel` to `true` to visually hide the label.
 <Toggle hideLabel label="Custom label" />
 ```
 
+### Disabled
+
+Set `disabled` to `true` to use the disabled state.
+
+```svelte
+<Toggle disabled />
+```
+
 ### Fully controlled
 
 `ToggleCore` is an unstyled component that provides the accessibility attributes for the `label` and `button` elements.
