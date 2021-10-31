@@ -2,7 +2,7 @@
   "name": "svelte-toggle",
   "version": "3.0.2",
   "license": "MIT",
-  "description": "Accessible toggle switch component for Svelte",
+  "description": "Accessible toggle switch component",
   "author": "Eric Liu (https://github.com/metonym)",
   "svelte": "./src/index.js",
   "main": "./lib/index.js",

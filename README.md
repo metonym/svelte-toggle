@@ -2,11 +2,11 @@
 
 [![NPM][npm]][npm-url]
 
-> Accessible toggle switch component for Svelte.
+> Accessible toggle switch component
 
 <!-- REPO_URL -->
 
-This component implements accessibility practices for toggle buttons recommended by the [Inclusive Components guide](https://inclusive-components.design/toggle-button/).
+This Svelte component implements accessibility practices for toggle buttons recommended by the [Inclusive Components guide](https://inclusive-components.design/toggle-button/).
 
 Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964aca61).
 
