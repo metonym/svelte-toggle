@@ -13,12 +13,12 @@
     "dev": "rollup -cw",
     "build": "rollup -c",
     "prepack": "BUNDLE=true rollup -c",
-    "test": "svelte-check --workspace=test/*"
+    "test": "svelte-check --workspace test"
   },
   "devDependencies": {
     "svelte": "^3.44.0",
-    "svelte-check": "^2.2.7",
-    "svelte-readme": "^3.4.1"
+    "svelte-check": "^2.2.8",
+    "svelte-readme": "^3.6.0"
   },
   "repository": {
     "type": "git",
