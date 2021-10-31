@@ -28,6 +28,12 @@ yarn add -D svelte-toggle
 npm i -D svelte-toggle
 ```
 
+**pnpm**
+
+```bash
+pnpm i -D svelte-toggle
+```
+
 ## Usage
 
 ### Basic
