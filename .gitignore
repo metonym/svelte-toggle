@@ -1,6 +1,6 @@
 .DS_Store
-/lib
-/dist
-/node_modules
+lib
+dist
+node_modules
 yarn-debug.log*
 yarn-error.log*

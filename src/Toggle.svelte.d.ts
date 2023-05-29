@@ -1,5 +1,4 @@
-/// <reference types="svelte" />
-import { SvelteComponentTyped } from "svelte";
+import type { SvelteComponentTyped } from "svelte";
 
 export interface ToggleProps
   extends svelte.JSX.HTMLAttributes<HTMLElementTagNameMap["button"]> {
@@ -60,6 +59,11 @@ export interface ToggleProps
    * @default "#8d8d8d"
    */
   untoggledColor?: string;
+
+  /**
+   * `$$restProps` are forwarded to `<button>`
+   */
+  [key: string]: any;
 }
 
 export default class Toggle extends SvelteComponentTyped<

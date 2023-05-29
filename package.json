@@ -5,20 +5,27 @@
   "description": "Accessible toggle switch component",
   "author": "Eric Liu (https://github.com/metonym)",
   "svelte": "./src/index.js",
-  "main": "./lib/index.js",
-  "module": "./lib/index.mjs",
-  "types": "./types/index.d.ts",
-  "sideEffects": false,
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
   "scripts": {
     "dev": "rollup -cw",
     "build": "rollup -c",
-    "prepack": "BUNDLE=true rollup -c",
-    "test": "svelte-check --workspace test"
+    "check": "svelte-check --workspace tests",
+    "test": "vitest",
+    "format": "prettier --write ."
   },
   "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.4.1",
+    "@testing-library/svelte": "^3.2.2",
+    "jsdom": "^22.1.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-svelte": "^2.10.1",
     "svelte": "^3.59.1",
     "svelte-check": "^3.4.3",
-    "svelte-readme": "^3.6.3"
+    "svelte-readme": "^3.6.3",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.1"
   },
   "repository": {
     "type": "git",
@@ -40,5 +47,6 @@
     "lib",
     "src",
     "types"
-  ]
+  ],
+  "type": "module"
 }
