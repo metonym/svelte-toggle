@@ -12,50 +12,53 @@ Try it in the [Svelte REPL](https://svelte.dev/repl/7eee5c643a684315a4fdfe45964a
 
 ---
 
-<!-- TOC -->
-
 ## Installation
 
-**Yarn**
-
-```bash
+```sh
+# yarn
 yarn add -D svelte-toggle
-```
 
-**NPM**
-
-```bash
+# npm
 npm i -D svelte-toggle
-```
 
-**pnpm**
-
-```bash
+# pnpm
 pnpm i -D svelte-toggle
 ```
 
 ## Usage
 
-### Basic
+### Uncontrolled
+
+The component is toggled by default.
 
 ```svelte
 <script>
   import Toggle from "svelte-toggle";
 
-  let toggled;
+  let isToggled = true;
 </script>
 
-<Toggle bind:toggled />
+<Toggle on:toggle={(e) => (isToggled = e.detail)} />
 
-Toggled? {toggled}
+Toggled? {isToggled}
 ```
+
+### Two-way binding
 
 The `toggled` prop supports two way binding.
 
 ```svelte
+<script>
+  import Toggle from "svelte-toggle";
+
+  let toggled = false;
+</script>
+
 <Toggle bind:toggled />
 
-<button on:click={() => (toggled = !toggled)}>Toggle</button>
+<button on:click={() => (toggled = !toggled)}>
+  {toggled ? "Turn off" : "Turn on"}
+</button>
 ```
 
 ### Switch descriptors
@@ -124,6 +127,8 @@ Set `disabled` to `true` to use the disabled state.
 
 `ToggleCore` is an unstyled component that provides the accessibility attributes for the `label` and `button` elements.
 
+Use this component if you want to style the component yourself.
+
 ```svelte
 <script>
   import { ToggleCore } from "svelte-toggle";
@@ -181,12 +186,6 @@ on:toggle: {events.join(", ")}
 - on:click
 - on:focus
 - on:blur
-
-## TypeScript
-
-Svelte version 3.31 or greater is required to use this component with TypeScript.
-
-TypeScript definitions are located in the [types folder](./types).
 
 ## Changelog
 

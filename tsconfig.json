@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2017",
+    "types": ["svelte"],
+    "paths": {
+      "svelte-toggle": ["./src"],
+      "svelte-toggle/*": ["./src/*"]
+    }
+  },
+  "include": ["src", "tests"]
+}

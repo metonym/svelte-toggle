@@ -67,10 +67,8 @@
       class:small
       {...$$restProps}
       {...button}
-      style="color: {switchColor}; background-color: {toggled
-        ? toggledColor
-        : untoggledColor};
-      {$$restProps.style}"
+      style:color={switchColor}
+      style:background-color={toggled ? toggledColor : untoggledColor}
       {disabled}
       on:click
       on:click={() => (toggled = !toggled)}
