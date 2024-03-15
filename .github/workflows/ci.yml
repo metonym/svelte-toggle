@@ -1,10 +1,19 @@
-name: CI
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches: [master]
+
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - uses: actions/cache@v4
+        id: yarn-cache
+        with:
+          path: "**/node_modules"
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
       - name: Run unit tests
         run: |
           yarn
